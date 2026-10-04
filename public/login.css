@@ -1,0 +1,44 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #303030;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  margin: 0;
+}
+.card {
+  background: #424242;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 380px;
+}
+label { display: block; margin-top: 1rem; font-weight: 600; }
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #777;
+  border-radius: 4px;
+  background: #222;
+  color: #eee;
+}
+input[aria-invalid="true"] { border-color: #ff6b6b; }
+.error { color: #ff6b6b; min-height: 1.2em; margin: 0.3rem 0 0; font-size: 0.9rem; }
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: 0;
+  border-radius: 4px;
+  background: #ff9800;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: wait; }
+#form-status { margin-top: 1rem; min-height: 1.2em; }
+#form-status.ok { color: #7cd67c; }
+#form-status.fail { color: #ff6b6b; }

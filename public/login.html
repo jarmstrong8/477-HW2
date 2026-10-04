@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice Shop – Login</title>
+  <!-- No inline <script> or <style>: everything is external so a strict CSP (script-src 'self') can block injected scripts. -->
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <section id="login-view">
+      <h1>Login</h1>
+
+      <!-- novalidate: we run our own JS validation so messages are consistent; the server re-validates everything anyway. -->
+      <form id="login-form" novalidate autocomplete="on">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" maxlength="254" required autocomplete="username">
+        <p class="error" id="email-error" role="alert" aria-live="polite"></p>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" minlength="8" maxlength="128" required autocomplete="current-password">
+        <p class="error" id="password-error" role="alert" aria-live="polite"></p>
+
+        <button type="submit" id="submit-btn">Log in</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="account-view" hidden>
+      <h1>Welcome</h1>
+      <p>Logged in as <strong id="account-email"></strong></p>
+      <button type="button" id="logout-btn">Log out</button>
+    </section>
+  </main>
+</body>
+</html>
